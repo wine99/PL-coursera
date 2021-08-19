@@ -52,7 +52,7 @@ class MyBoard < Board
   end
 
   def cheat
-    if !game_over? and @game.is_running? and !@cheating and @score > Cheat_Cost
+    if !game_over? and @game.is_running? and !@cheating and @score >= Cheat_Cost
       @cheating = true
       @score -= Cheat_Cost
     end
